@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     "polls.apps.PollsConfig",
     "django.contrib.admin",
     "django.contrib.auth",
+    "debug_toolbar",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -137,4 +139,9 @@ TEMPLATES = [
             ],
         },
     },
+]
+
+INTERNAL_IPS = [
+    
+    "127.0.0.1",
 ]
